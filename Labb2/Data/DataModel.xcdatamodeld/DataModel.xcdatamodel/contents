@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllCourses" representedClassName="AllCourses" syncable="YES">
+        <attribute name="addedToFav" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="courseInfo" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="interested" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="favoriteCours" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoriteCourse" inverseName="allCourses" inverseEntity="FavoriteCourse"/>
+    </entity>
+    <entity name="FavoriteCourse" representedClassName="FavoriteCourse" syncable="YES">
+        <attribute name="addedToFav" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="courseInfo" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="interested" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="allCourses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AllCourses" inverseName="favoriteCours" inverseEntity="AllCourses"/>
+    </entity>
+    <elements>
+        <element name="FavoriteCourse" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="AllCourses" positionX="-63" positionY="18" width="128" height="119"/>
+    </elements>
+</model>
